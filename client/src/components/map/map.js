@@ -20,6 +20,8 @@ import { formatRelative } from "date-fns";
 
 import "@reach/combobox/styles.css";
 import mapStyles from "./mapStyles";
+import "./map.css";
+import compass from "./compass.png";
 
 const libraries = ["places"];
 const mapContainerStyle = {
@@ -70,13 +72,6 @@ export default function Map() {
 
   return (
     <div>
-      <h1>
-        Bears{" "}
-        <span role="img" aria-label="tent">
-          ⛺️
-        </span>
-      </h1>
-
       <Locate panTo={panTo} />
       <Search panTo={panTo} />
 
@@ -144,7 +139,7 @@ function Locate({ panTo }) {
         );
       }}
     >
-      <img src="/compass.svg" alt="compass" />
+      <img src={compass} alt="compass" />
     </button>
   );
 }
